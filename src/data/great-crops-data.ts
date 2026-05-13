@@ -1130,13 +1130,13 @@ export const remoteSensingProbes: RemoteSensingProbe[] = [
     installDate: '2026-04-01',
   },
 
-  // Third Provider Probes (Sites 40902, 40903) — update provider name when confirmed
+  // AquaSpy Probes (Sites 40902, 40903)
   {
-    id: 'P3-40902',
+    id: 'AGS-40902',
     blockId: 'block-31',
     ranchId: 'ranch-15',
-    provider: 'provider3',
-    probeId: 'P3-40902',
+    provider: 'aquaspy',
+    probeId: 'AGS-40902',
     status: 'online',
     batteryPercent: 96,
     signalStrength: 91,
@@ -1144,11 +1144,11 @@ export const remoteSensingProbes: RemoteSensingProbe[] = [
     installDate: '2026-04-01',
   },
   {
-    id: 'P3-40903',
+    id: 'AGS-40903',
     blockId: 'block-32',
     ranchId: 'ranch-15',
-    provider: 'provider3',
-    probeId: 'P3-40903',
+    provider: 'aquaspy',
+    probeId: 'AGS-40903',
     status: 'online',
     batteryPercent: 89,
     signalStrength: 84,

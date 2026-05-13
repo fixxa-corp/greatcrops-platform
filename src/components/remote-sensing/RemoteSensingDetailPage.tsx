@@ -23,8 +23,7 @@ import { formatDate } from '../../lib/utils';
 const providerInfo = {
   aquaspy: { name: 'AquaSpy', logo: '🔵', color: 'bg-blue-500' },
   soiltech: { name: 'SoilTech', logo: '🟢', color: 'bg-green-500' },
-  agrology: { name: 'Agrology', logo: '🟡', color: 'bg-orange-500' },
-  provider3: { name: 'Provider 3', logo: '🟣', color: 'bg-purple-500' }
+  agrology: { name: 'Agrology', logo: '🟡', color: 'bg-orange-500' }
 };
 
 export function RemoteSensingDetailPage() {

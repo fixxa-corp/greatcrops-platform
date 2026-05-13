@@ -35,12 +35,6 @@ const providerInfo = {
     logo: '🟡',
     color: 'bg-orange-500',
     description: 'CO2 and VWC monitoring'
-  },
-  provider3: {
-    name: 'Provider 3',
-    logo: '🟣',
-    color: 'bg-purple-500',
-    description: 'Soil data analytics'
   }
 };
 

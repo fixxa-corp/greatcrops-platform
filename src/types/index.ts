@@ -47,7 +47,7 @@ export interface Block {
 }
 
 // Remote Sensing types
-export type RemoteSensingProvider = 'aquaspy' | 'soiltech' | 'agrology' | 'provider3';
+export type RemoteSensingProvider = 'aquaspy' | 'soiltech' | 'agrology';
 
 export interface RemoteSensingProbe {
   id: string;
