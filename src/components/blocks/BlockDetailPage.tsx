@@ -5,7 +5,7 @@ import {
   Beaker, Microscope, Wifi, AlertTriangle, CheckCircle, Leaf,
   Bug, TrendingUp, BarChart3, Search, Shield, FileText,
 } from 'lucide-react';
-import { SoilDataPanel } from './SoilDataPanel';
+import { RemoteSensingTab } from './RemoteSensingTab';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
   ResponsiveContainer, PieChart as RechartsPieChart, Pie, Cell,
@@ -671,44 +671,7 @@ export function BlockDetailPage() {
 
           {/* ─── REMOTE SENSING TAB ─── */}
           {activeTab === 'remote-sensing' && (
-            <div className="space-y-6">
-              {/* Live Soil Data from APIs */}
-              <SoilDataPanel blockId={block.id} />
-              
-              {/* Legacy probe data */}
-              {blockProbes.length > 0 && (
-                <>
-                  <div className="border-t pt-6">
-                    <h3 className="text-lg font-semibold text-charcoal mb-4">Legacy Sensor Network</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      {blockProbes.map(probe => (
-                        <Card key={probe.id}>
-                          <CardContent className="p-4">
-                            <div className="flex items-center justify-between mb-3">
-                              <span className="font-semibold text-charcoal">{probe.probeId}</span>
-                              <div className="flex items-center gap-2">
-                                <div className={`w-2 h-2 rounded-full ${probe.status === 'online' ? 'bg-green-500' : 'bg-red-500'}`} />
-                                <Badge variant={probe.status === 'online' ? 'success' : 'danger'} size="sm">{probe.status}</Badge>
-                              </div>
-                            </div>
-                            <div className="space-y-1 text-sm text-gray-600">
-                              <div className="flex justify-between"><span>Provider:</span><span className="font-medium capitalize">{probe.provider}</span></div>
-                              <div className="flex justify-between"><span>Battery:</span><span className="font-medium">{probe.batteryPercent}%</span></div>
-                              <div className="flex justify-between"><span>Signal:</span><span className="font-medium">{probe.signalStrength}%</span></div>
-                              <div className="flex justify-between"><span>Installed:</span><span className="font-medium">{formatDate(probe.installDate)}</span></div>
-                            </div>
-                            <div className="text-xs text-gray-400 mt-2">Last reading: {formatDate(probe.lastReading)}</div>
-                            <Button variant="outline" size="sm" className="w-full mt-3" onClick={() => navigate('/app/remote-sensing')}>
-                              View Data →
-                            </Button>
-                          </CardContent>
-                        </Card>
-                      ))}
-                    </div>
-                  </div>
-                </>
-              )}
-            </div>
+            <RemoteSensingTab block={block} ranch={ranch} probes={blockProbes} />
           )}
 
           {/* ─── SOIL CHEMISTRY TAB ─── */}
