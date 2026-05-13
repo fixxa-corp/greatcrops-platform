@@ -1076,15 +1076,15 @@ export const remoteSensingProbes: RemoteSensingProbe[] = [
     installDate: '2026-03-15',
   },
 
-  // ─── Kaffer Ranch / Sympatica Farms — 3 Soil Data Providers ─────────────
-
-  // SoilTech Probes (Sites 40907, 40868)
+  // ─── Kaffer Ranch / Sympatica Farms — AquaSpy Probes (6 sites) ────────
+  // All 6 site IDs are AquaSpy sensors
+  // SoilTech and Agrology are separate API integrations (not site-ID based)
   {
-    id: 'ST-40907',
+    id: 'AGS-40907',
     blockId: 'block-31',
     ranchId: 'ranch-15',
-    provider: 'soiltech',
-    probeId: 'ST-40907',
+    provider: 'aquaspy',
+    probeId: 'AGS-40907',
     status: 'online',
     batteryPercent: 94,
     signalStrength: 88,
@@ -1092,25 +1092,23 @@ export const remoteSensingProbes: RemoteSensingProbe[] = [
     installDate: '2026-04-01',
   },
   {
-    id: 'ST-40868',
-    blockId: 'block-32',
+    id: 'AGS-40868',
+    blockId: 'block-31',
     ranchId: 'ranch-15',
-    provider: 'soiltech',
-    probeId: 'ST-40868',
+    provider: 'aquaspy',
+    probeId: 'AGS-40868',
     status: 'online',
     batteryPercent: 91,
     signalStrength: 85,
     lastReading: '2026-05-13T11:30:00',
     installDate: '2026-04-01',
   },
-
-  // Agrology Probes (Sites 40867, 40906)
   {
-    id: 'AGL-40867',
+    id: 'AGS-40867',
     blockId: 'block-31',
     ranchId: 'ranch-15',
-    provider: 'agrology',
-    probeId: 'AGL-40867',
+    provider: 'aquaspy',
+    probeId: 'AGS-40867',
     status: 'online',
     batteryPercent: 88,
     signalStrength: 82,
@@ -1118,22 +1116,20 @@ export const remoteSensingProbes: RemoteSensingProbe[] = [
     installDate: '2026-04-01',
   },
   {
-    id: 'AGL-40906',
+    id: 'AGS-40906',
     blockId: 'block-32',
     ranchId: 'ranch-15',
-    provider: 'agrology',
-    probeId: 'AGL-40906',
+    provider: 'aquaspy',
+    probeId: 'AGS-40906',
     status: 'online',
     batteryPercent: 93,
     signalStrength: 90,
     lastReading: '2026-05-13T11:30:00',
     installDate: '2026-04-01',
   },
-
-  // AquaSpy Probes (Sites 40902, 40903)
   {
     id: 'AGS-40902',
-    blockId: 'block-31',
+    blockId: 'block-32',
     ranchId: 'ranch-15',
     provider: 'aquaspy',
     probeId: 'AGS-40902',
