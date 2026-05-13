@@ -1076,13 +1076,15 @@ export const remoteSensingProbes: RemoteSensingProbe[] = [
     installDate: '2026-03-15',
   },
 
-  // Kaffer Ranch / Sympatica Farms - Agrology Probes (6 sites)
+  // ─── Kaffer Ranch / Sympatica Farms — 3 Soil Data Providers ─────────────
+
+  // SoilTech Probes (Sites 40907, 40868)
   {
-    id: 'AGL-40907',
+    id: 'ST-40907',
     blockId: 'block-31',
     ranchId: 'ranch-15',
-    provider: 'agrology',
-    probeId: 'AGL-40907',
+    provider: 'soiltech',
+    probeId: 'ST-40907',
     status: 'online',
     batteryPercent: 94,
     signalStrength: 88,
@@ -1090,17 +1092,19 @@ export const remoteSensingProbes: RemoteSensingProbe[] = [
     installDate: '2026-04-01',
   },
   {
-    id: 'AGL-40868',
-    blockId: 'block-31',
+    id: 'ST-40868',
+    blockId: 'block-32',
     ranchId: 'ranch-15',
-    provider: 'agrology',
-    probeId: 'AGL-40868',
+    provider: 'soiltech',
+    probeId: 'ST-40868',
     status: 'online',
     batteryPercent: 91,
     signalStrength: 85,
     lastReading: '2026-05-13T11:30:00',
     installDate: '2026-04-01',
   },
+
+  // Agrology Probes (Sites 40867, 40906)
   {
     id: 'AGL-40867',
     blockId: 'block-31',
@@ -1125,12 +1129,14 @@ export const remoteSensingProbes: RemoteSensingProbe[] = [
     lastReading: '2026-05-13T11:30:00',
     installDate: '2026-04-01',
   },
+
+  // Third Provider Probes (Sites 40902, 40903) — update provider name when confirmed
   {
-    id: 'AGL-40902',
-    blockId: 'block-32',
+    id: 'P3-40902',
+    blockId: 'block-31',
     ranchId: 'ranch-15',
-    provider: 'agrology',
-    probeId: 'AGL-40902',
+    provider: 'provider3',
+    probeId: 'P3-40902',
     status: 'online',
     batteryPercent: 96,
     signalStrength: 91,
@@ -1138,11 +1144,11 @@ export const remoteSensingProbes: RemoteSensingProbe[] = [
     installDate: '2026-04-01',
   },
   {
-    id: 'AGL-40903',
+    id: 'P3-40903',
     blockId: 'block-32',
     ranchId: 'ranch-15',
-    provider: 'agrology',
-    probeId: 'AGL-40903',
+    provider: 'provider3',
+    probeId: 'P3-40903',
     status: 'online',
     batteryPercent: 89,
     signalStrength: 84,
